@@ -22,13 +22,13 @@ export function fetchCountries(name) {
                     </li>`);
                 } else if (countries.length === 1) {
                     countryData.insertAdjacentHTML('beforeend', `
-                        <div class="country-info__name">
+                        <div class="country-info">
                         <img src="${flag}", width="70"></img>
-                        <span class="country-info__entry">${countryName}</span>
+                        <span class="country-info">${countryName}</span>
                         </div>
-                        <p><span class="country-info__entry">Capital:</span> ${capital}</p>
-                        <p><span class="country-info__entry">Population:</span> ${population}</p>
-                        <p><span class="country-info__entry">Languages:</span> ${Object.values(languages)}</p>
+                        <p><span class="country-info">Capital:</span> ${capital}</p>
+                        <p><span class="country-info">Population:</span> ${population}</p>
+                        <p><span class="country-info">Languages:</span> ${Object.values(languages)}</p>
                         `)
            
                 }
@@ -45,6 +45,5 @@ export function fetchCountries(name) {
             
             })
 };
-
 
 
