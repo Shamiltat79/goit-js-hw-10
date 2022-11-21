@@ -23,14 +23,18 @@ function onInput(event) {
     }
     fetchCountries(countryToSearch)
         .then(countries => {
-            if (countries.lenght > 10) {
-                return Notify.info('Too many matches found. Please enter a more specific name.');
+         if (countries.length > 10) {
+                 Notify.info('Too many matches found. Please enter a more specific name.');
             }
             
-            if (countries.lenght === 1) {
+            else if (countries.length === 1) {
         createContryList(countries);
             }
-            createCountrtiesList(countries);
+            else {
+                createCountrtiesList(countries);
+            }
+            // createCountrtiesList(countries);
+            
         })
     .catch(error => Notify.failure('Oops, there is no country with that name'));
     
